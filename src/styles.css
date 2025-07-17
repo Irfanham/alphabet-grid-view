@@ -29,9 +29,8 @@ header .wrapper{
 /* Character List */
 .char-list{
     margin-block: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     column-gap: 2%;
     row-gap: 24px;
 }
