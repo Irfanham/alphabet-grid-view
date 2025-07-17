@@ -1,5 +1,5 @@
-() => {
-  const charListEl = document.querySelector("#charList");
+(() => {
+  const charListElement = document.querySelector("#charList");
 
   const templateCharItem = (char) => `
     <article tabindex="0" class="char-item">
@@ -11,14 +11,14 @@
             <div class="char__pronounce">${char.pronounce}</div>
         </div>
         <div class="char__example">
-            <img src="${char.example[0].img}" alt="${char.example[0].title}" class="char__example-img">
-            <p class="char__example-name">${char.example[0].title}</p>
+            <img src="${char.examples[0].img}" alt="${char.examples[0].title}" class="char__example-img">
+            <p class="char__example-name">${char.examples[0].title}</p>
         </div>
     </article>
     
     `;
-    charListEl.innerHTML = ''
+    charListElement.innerHTML = ''
     alphabets.forEach((char)=>{
-        charListEl.innerHTML += templateCharItem(char);
+        charListElement.innerHTML += templateCharItem(char);
     })
-};
+})();
